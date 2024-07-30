@@ -20,4 +20,5 @@ SDL_Texture *loadTexture(App *app, char *filename);
 /**
  * Draws a texture at a given position
  */
-void drawTextureAt(App *app, SDL_Texture *texture, int x_pos, int y_pos, int width, int height);
+void drawTextureAt(App *app, SDL_Texture *texture, int x_pos, int y_pos,
+                   int width, int height);
