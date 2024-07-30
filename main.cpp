@@ -92,19 +92,20 @@ int main() {
 
   game->player->texture = loadTexture(app, "assets/star_fox_ship.jpg");
 
-  std::array<char *, 3> enemyTextures = {
+  std::array<std::string, 3> enemy_imgs = {
       "assets/space_invaders_enemy_red.png",
       "assets/space_invader_3d.png",
       "assets/space_invaders_blue.png",
   };
 
-  int curEnemyTexture = 0;
+  int cur_enemy_texture = 0;
   for (int i = 0; i < game->invaders.size(); i++) {
     if (i != 0 && i % num_invaders_per_row == 0) {
-      curEnemyTexture++;
+      cur_enemy_texture++;
     }
-    game->invaders.at(i)->texture =
-        loadTexture(app, enemyTextures[curEnemyTexture % enemyTextures.size()]);
+    char *texture_img =
+        (char *)enemy_imgs[cur_enemy_texture % enemy_imgs.size()].c_str();
+    game->invaders.at(i)->texture = loadTexture(app, texture_img);
   }
 
   while (true) {

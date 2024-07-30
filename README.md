@@ -1,3 +1,6 @@
+# Acknowledgements
+- Got a lot of good SDL examples by looking at part 1 through 3 of https://www.parallelrealities.co.uk/tutorials/#shooter
+
 # Build Instructions
 
 To install SDL2 (on MAC):
