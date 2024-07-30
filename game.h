@@ -14,7 +14,7 @@ struct Character {
 };
 
 struct Game {
-    std::vector<Character> invaders;
+    std::vector<Character *> invaders;
     Character *player;
-    Game(int num_invaders, int screen_width, int screen_height);
+    Game(int num_invaders, int num_invaders_per_row, int screen_width, int screen_height);
 };
