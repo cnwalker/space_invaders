@@ -114,7 +114,7 @@ int main() {
     game->runStep();
     drawAssets(app, game);
     presentScene(app);
-    SDL_Delay(16); // What is this?
+    SDL_Delay(17); // Sleeps for 17 milliseconds, so game runs at ~60 fps.
   }
 
   return 0;
